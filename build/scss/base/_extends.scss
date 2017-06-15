@@ -1,0 +1,42 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+* {
+    font-smoothing: antialiased;
+}
+
+.clearfix {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+.screen-reader-text {
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	padding: 1em;
+	margin: 1em;
+	background-color: color(white);
+	z-index: 999;
+
+	&:focus {
+		position: absolute;
+		left: 0px;
+		top: 2em;
+		width: auto; 
+		height: auto; 
+	}
+}

@@ -1,0 +1,24 @@
+.site-footer {
+	display: block;
+	width: 100%;
+	margin: 0;
+	padding: 1.5em;
+	clear: both;
+	text-align: center;
+	font-weight: bolder;
+	color: color(white);
+	background-color: color(gray-80);
+
+	a {
+		color: color(gray-15);
+		border: none;
+		text-decoration: none;
+		&:hover {
+			color: color(white);
+		}
+	}
+
+	.sep {
+		padding: 0 .85em;
+	}
+}

@@ -1,0 +1,143 @@
+/*==================================
+=            Typography            =
+==================================*/
+
+/*----------  Content  ----------*/
+
+p {
+    margin: 0 0 1.5em;
+    font-family: $sans-serif;
+}
+
+.content-area {
+    a {
+        color: color(link);
+        text-decoration: none;
+        padding-bottom: 2px;
+        border-bottom: 1px solid color(link);
+
+        &:hover {
+            color: color(linkhover);
+            border-bottom: 1px solid color(linkhover);
+        }
+    }
+}
+
+figcaption {
+    font-style: italic;
+    font-size: 0.8125em;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+blockquote {
+    font-style: italic;
+    margin-left: 0;
+    margin-right: 0;
+
+    p {
+        color: color(primary);
+        font-size: 1.125em;
+    }
+}
+
+/*----------  Headings  ----------*/
+
+h1, h2 {
+  font-family: $serif;
+}
+
+h3, h4, h5, h6 {
+  font-family: $sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6, {
+
+    & + p {
+        margin-top: 0;
+    }
+}
+
+h1 {
+    font-size: 2.25em;
+}
+
+h2 {
+    font-size: 1.875em;
+}
+
+h3 {
+    font-size: 1.17em;
+}
+
+h4 {
+    font-size: 1em;
+}
+
+h5 {
+    font-size: 0.87em;
+}
+
+h6 {
+    font-size: 0.67em;
+}
+
+/*----------  Lists  ----------*/
+
+ul {
+    list-style: none;
+    padding-left: 1em;
+    padding-bottom: 4px; //Fixes link underline being clipped from "overflow: hidden;" when the last list item contains a link.
+    color: color(primary);
+
+    .site-content & {
+        overflow: hidden;
+    }
+
+    li {
+        margin-bottom: 6px;
+        line-height: 1.6;
+
+        &:before {
+            content: '\25A0';
+            margin-right: 0.35em;
+        }
+    }
+}
+
+ol {
+    padding-left: 1em;
+    list-style: none;
+    counter-reset: li;
+    color: color(primary);
+
+    li {
+        counter-increment: li;
+        line-height: 1.6;
+
+        ul {
+            list-style: none;
+
+            li {
+                counter-increment: unset;
+
+                &:before {
+                    content: '\25A0';
+                    margin-right: 0.35em;
+                }
+            }
+        }
+    }
+
+    li:before {
+        content: counter(li) '. ';
+        font-weight: bolder;
+    }
+}
+
+/*=====  End of Typography  ======*/
