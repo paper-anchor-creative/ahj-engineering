@@ -16,12 +16,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 
+
 <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
+	<div id="menu" class="menu slideout-menu slideout-menu-right">
 
+		<nav id="site-navigation" class="nav" role="navigation">
+			<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
+		</nav><!-- #site-navigation -->
+	</div>
 <div id="page" class="site">
+	<div id="panel">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'paper-anchor' ); ?></a>
 
 	<header id="header" class="header" role="banner">
@@ -44,7 +51,7 @@
 					<?php endif; ?>
 				</h1>
 			<?php else : ?>
-				<p class="site-title h1">
+				<h1 class="site-title">
 					<?php
 						$logo = get_option('logo');
 					?>
@@ -57,7 +64,6 @@
 							<?php bloginfo( 'name' ); ?>
 						</a>
 					<?php endif; ?>
-				</p>
 			<?php
 			endif;
 
@@ -68,12 +74,7 @@
 			endif; ?>
 		</div>
 	<!-- .brand -->
-	<div class="nav-container">
-		<nav id="site-navigation" class="nav" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'paper-anchor' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
-	</div>
+	<button class="slideout-toggle">Menu</button>
 	</div>
 	</header><!-- #masthead -->
 

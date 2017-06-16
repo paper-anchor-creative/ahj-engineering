@@ -6,83 +6,32 @@
 }
 
 .masthead {
-    height: $header_height;
     width: 100%;
+    height: 80px;
     max-width: $xl;
     margin: 0 auto;
     padding: 0 1em;
     position: relative;
     display: block;
+    transition: height 0.5s;
+    @include media($large) {
+        height: $header_height;
+    }
 }
 
 .brand {
-    display: block;
+    display: inline-block;
 
     img {
-      @include media($medium) {
-        max-height: ($header_height * .6);
-        margin-top: ($header_height * .2);
-      }
-    }
-}
-
-.nav-container {
-  @include media($large) {
-    position: absolute;
-    right: 1em;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-}
-
-.menu-toggle {
-  width: 100%;
-  background-color: color(primary-dark);
-  border: 0;
-  padding: 1em;
-  color: color(white);
-  cursor: pointer;
-}
-
-.nav-menu {
-    display: none;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    .nav.toggled  & {
-      display: block;
-    }
-}
-
-
-.menu-item {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    &:before {
-        display: none;
-    }
-
-    a {
-        font-family: $serif;
-        font-size: 20px;
-        cursor: pointer;
-        margin: 0;
-        padding: 1em;
-        color: color(white);
-        border: none;
-        background-color: transparent;
-        text-decoration: none;
-        display: inline-block;
-        transition: color 0.2s ease 0s, border-color 0.2s ease 0s, background-color 0.2s ease 0s;
-        &:hover {
-            background-color: color(primary-dark);
+        height: 30px;
+        margin: 22px 0 0;
+        @include media($medium) {
+            height: 50px;
+            margin: 15px 0;
+        }
+        @include media($large) {
+            max-height: ($header_height * .6);
+            margin-top: ($header_height * .2);
         }
     }
-}
-
-.menu-item-has-children {
-  .sub-menu {
-    display: none;
-  }
 }
