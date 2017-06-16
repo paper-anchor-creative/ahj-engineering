@@ -109,7 +109,13 @@ function paper_anchor_scripts() {
 
   wp_enqueue_style( 'ahj-engineering-crane-styles', get_template_directory_uri() . '/dist/style.css', array(), '20151215', false );
 
+<<<<<<< HEAD
   wp_enqueue_script( 'ahj-engineering-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+=======
+  wp_enqueue_script( 'paper-anchor-slideout', get_template_directory_uri() . '/js/slideout.min.js', array(), '20151215', true );
+
+  wp_enqueue_script( 'paper-anchor-slideout-config', get_template_directory_uri() . '/js/slideout-config.js', array(), '20151215', true );
+>>>>>>> origin/dev-drew
 
   wp_enqueue_script( 'ahj-engineering-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
@@ -177,13 +183,13 @@ if ( is_user_logged_in() ) {
 function add_role_to_body($classes) {
   $current_user = new WP_User(get_current_user_id());
   $user_role = array_shift($current_user->roles);
-  
+
   if (is_admin()) {
     $classes .= $user_role;
   } else {
     $classes[] = $user_role;
   }
-  
+
   return $classes;
 }
 
@@ -219,7 +225,7 @@ add_filter( 'tiny_mce_before_init', 'TinyMCE_settings' );
 
 function tab_settings($settings) {
   $settings['media_buttons'] = false;
-  
+
   if ( !current_user_can( 'manage_options' ) ) {
     $settings['quicktags'] = false;
   }
