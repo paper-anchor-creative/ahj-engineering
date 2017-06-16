@@ -1,8 +1,8 @@
 <?php
 /**
- * paper-anchor Theme Customizer
+ * ahj-engineering Theme Customizer
  *
- * @package paper-anchor
+ * @package ahj-engineering
  */
 
 /**

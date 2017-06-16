@@ -1,10 +1,10 @@
 <?php
 /**
- * paper-anchor functions and definitions
+ * ahj-engineering functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package paper-anchor
+ * @package ahj-engineering
  */
 
 if ( ! function_exists( 'paper_anchor_setup' ) ) :
@@ -19,10 +19,10 @@ function paper_anchor_setup() {
   /*
    * Make theme available for translation.
    * Translations can be filed in the /languages/ directory.
-   * If you're building a theme based on paper-anchor, use a find and replace
-   * to change 'paper-anchor' to the name of your theme in all the template files.
+   * If you're building a theme based on ahj-engineering, use a find and replace
+   * to change 'ahj-engineering' to the name of your theme in all the template files.
    */
-  load_theme_textdomain( 'paper-anchor', get_template_directory() . '/languages' );
+  load_theme_textdomain( 'ahj-engineering', get_template_directory() . '/languages' );
 
   // Add default posts and comments RSS feed links to head.
   add_theme_support( 'automatic-feed-links' );
@@ -44,7 +44,7 @@ function paper_anchor_setup() {
 
   // This theme uses wp_nav_menu() in one location.
   register_nav_menus( array(
-    'menu-1' => esc_html__( 'Primary', 'paper-anchor' ),
+    'menu-1' => esc_html__( 'Primary', 'ahj-engineering' ),
   ) );
 
   /*
@@ -90,9 +90,9 @@ add_action( 'after_setup_theme', 'paper_anchor_content_width', 0 );
  */
 function paper_anchor_widgets_init() {
   register_sidebar( array(
-    'name'          => esc_html__( 'Sidebar', 'paper-anchor' ),
+    'name'          => esc_html__( 'Sidebar', 'ahj-engineering' ),
     'id'            => 'sidebar-1',
-    'description'   => esc_html__( 'Add widgets here.', 'paper-anchor' ),
+    'description'   => esc_html__( 'Add widgets here.', 'ahj-engineering' ),
     'before_widget' => '<section id="%1$s" class="widget %2$s">',
     'after_widget'  => '</section>',
     'before_title'  => '<h2 class="widget-title">',
@@ -105,13 +105,13 @@ add_action( 'widgets_init', 'paper_anchor_widgets_init' );
  * Enqueue scripts and styles.
  */
 function paper_anchor_scripts() {
-  wp_enqueue_style( 'paper-anchor-style', get_stylesheet_uri() );
+  wp_enqueue_style( 'ahj-engineering-style', get_stylesheet_uri() );
 
-  wp_enqueue_style( 'paper-anchor-crane-styles', get_template_directory_uri() . '/dist/style.css', array(), '20151215', false );
+  wp_enqueue_style( 'ahj-engineering-crane-styles', get_template_directory_uri() . '/dist/style.css', array(), '20151215', false );
 
-  wp_enqueue_script( 'paper-anchor-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+  wp_enqueue_script( 'ahj-engineering-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
-  wp_enqueue_script( 'paper-anchor-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+  wp_enqueue_script( 'ahj-engineering-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
   if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
     wp_enqueue_script( 'comment-reply' );
