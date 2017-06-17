@@ -21,16 +21,14 @@
 </head>
 
 <body <?php body_class(); ?>>
-	<div id="menu" class="menu slideout-menu slideout-menu-right">
-
-		<nav id="site-navigation" class="nav" role="navigation">
+	<div id="menu" class="slideout-menu slideout-menu-right">
+		<nav id="slideout-navigation" class="slideout-nav" role="navigation">
 			<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
 		</nav><!-- #site-navigation -->
 	</div>
+<div id="panel" class="panel">
 <div id="page" class="site">
-	<div id="panel">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'paper-anchor' ); ?></a>
-
 	<header id="header" class="header" role="banner">
 		<div class="masthead">
 		<div class="brand">
@@ -75,6 +73,9 @@
 		</div>
 	<!-- .brand -->
 	<button class="slideout-toggle">Menu</button>
+			<nav id="header-navigation" class="header-nav" role="navigation">
+			<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
+		</nav><!-- #site-navigation -->
 	</div>
 	</header><!-- #masthead -->
 

@@ -15,20 +15,68 @@ body {
   display: none;
 }
 
-.slideout-menu-left {
-  left: 0;
-}
-
 .slideout-menu-right {
   right: 0;
+}
+
+.slideout-menu-left {
+  left: 0;
 }
 
 .slideout-panel {
   position: relative;
   z-index: 1;
   will-change: transform;
-  background-color: #FFF; /* A background-color is required */
+  background-color: color(white); /* A background-color is required */
   min-height: 100vh;
+}
+
+.panel:before {
+  content: '';
+  display: none;
+  background-color: rgba(0,0,0,.75);
+}
+
+.panel:after {
+  display: none;
+}
+
+.panel-open:before {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  animation: display-none-transition .5s both;
+  z-index: 99;
+}
+
+.panel-open:after {
+  content: '';
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
+  position: absolute;
+  top: 1.25em;
+  z-index: 999;
+	background-image: url('data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0D%0A%3C%21--%20Generator%3A%20Adobe%20Illustrator%2021.1.0%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200%29%20%20--%3E%0D%0A%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20x%3D%220px%22%20y%3D%220px%22%0D%0A%09%20viewBox%3D%220%200%20512%20512%22%20style%3D%22enable-background%3Anew%200%200%20512%20512%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0D%0A%3Cstyle%20type%3D%22text/css%22%3E%0D%0A%09.st0%7Bfill%3A%23FFFFFF%3B%7D%0D%0A%3C/style%3E%0D%0A%3Cpolygon%20class%3D%22st0%22%20points%3D%22511.5%2C96.5%20415.5%2C0.5%20256%2C160%2096.5%2C0.5%200.5%2C96.5%20160%2C256%200.5%2C415.5%2096.5%2C511.5%20256%2C352%20415.5%2C511.5%20%0D%0A%09511.5%2C415.5%20352%2C256%20%22/%3E%0D%0A%3C/svg%3E%0D%0A');
+  background-repeat: no-repeat;
+  animation: display-none-transition .5s both;
+}
+
+.slideout-panel-right:after {
+  right: 1.25em;
+}
+
+.slideout-panel-left:after {
+  left: 1.25em;
+}
+
+
+@keyframes display-none-transition {
+  0% {
+    opacity: 0;
+  }
 }
 
 .slideout-open,
