@@ -9,7 +9,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package paper-anchor
+ * @package ahj-engineering
  */
 
 get_header(); ?>
