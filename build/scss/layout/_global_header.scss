@@ -27,7 +27,7 @@
     img {
         height: 30px;
         margin: 22px 0 0;
-        @include media($medium) {
+        @include media($small) {
             height: 50px;
             margin: 15px 0;
         }
@@ -53,7 +53,7 @@
   padding: 1em;
   color: color(white);
   cursor: pointer;
-  @include media(large) {
+  @include media($medium) {
     display: none;
   }
 }
@@ -136,10 +136,82 @@
       }
     }
   }
-  .header-nav & {
-    display: none;
-    @include media($large) {
-      display: block;
+}
+.header-nav {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+    .menu {
+        display: none;
+        @include media($medium) {
+            display: block;
+            .menu-item {
+                display: inline-block;
+                padding: 0;
+                margin-bottom: 0;
+                position: relative;
+                &:last-child {
+                  margin-right: 1em;
+                }
+                a {
+                  display: block;
+                  position: relative;
+                  padding: .5em;
+                  color: color(white);
+                  font-family: $serif;
+                  text-decoration: none;
+                  font-size: 1.25em;
+                  @include media($large) {
+                    font-size: 1.5em;
+                  }
+                  &:hover {
+                    &:after {
+                      content: '';
+                      position: absolute;
+                      top: 64px;
+                      left: 0;
+                      width: 100%;
+                      height: 10px;
+                      background-color: color(secondary);
+                      @include media($large) {
+                        top: ($header_height * .8 - 10px);
+                      }
+                    }
+                  }
+                }
+                &:hover {
+                  .sub-menu {
+                    display: block;
+                  }
+                }
+                .sub-menu {
+                  display: none;
+                  position: absolute;
+                  padding: 0;
+                  background-color: color(white);
+                  max-width: 280px;
+                  border-bottom: 10px solid color(secondary);
+                  animation: display-none-transition .2s both;
+                  .menu-item {
+                    width: 100%;
+                    a {
+                      display: block;
+                      width: 100%;
+                      padding: .5em 1em;
+                      color: color(black);
+                      font-size: 1.25em;
+                      &:hover {
+                        background-color: color(gray-05);
+                        &:after {
+                          display: none;
+                        }
+                      }
+                    }
+                  }
+                }
+            }
+        }
     }
-  }
 }
