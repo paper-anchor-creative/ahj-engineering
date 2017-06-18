@@ -23,7 +23,7 @@
 <body <?php body_class(); ?>>
 	<div id="menu" class="slideout-menu slideout-menu-right">
 		<nav id="slideout-navigation" class="slideout-nav" role="navigation">
-			<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
+			<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'mobile-menu' ) ); ?>
 		</nav><!-- #site-navigation -->
 	</div>
 <div id="panel" class="panel">
@@ -74,7 +74,7 @@
 	<!-- .brand -->
 	<button class="slideout-toggle">Menu</button>
 			<nav id="header-navigation" class="header-nav" role="navigation">
-			<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
+			<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'header-menu' ) ); ?>
 		</nav><!-- #site-navigation -->
 	</div>
 	</header><!-- #masthead -->
