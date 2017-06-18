@@ -17,3 +17,70 @@
 @import "layout/global_footer";
 @import "layout/global_sidebar";
 @import "layout/global_content";
+
+/* Shame */
+
+.hero-script {
+    color: color(white);
+    position: relative;
+    font-size: 150%;
+    text-shadow: 0 0 10px black;
+
+    h2, .hero-script-content {
+        width: 594px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .indent {
+        display: block;
+    }
+
+    .indent-1x {
+        display: block;
+        text-indent: 1em;
+    }
+
+    .indent-2x {
+        display: block;
+        text-indent: 2em;
+    }
+
+    .callout {
+        position: absolute;
+        display: inline-block;
+        font-family: $cursive;
+        font-weight: 400;
+        transform: rotate(-3deg) translate(-3.4em, 55px);
+
+        &::before {
+            content: "^";
+            position: absolute;
+            top: -7px;
+            left: 50px;
+            font-size: 140%;
+        }
+    }
+}
+
+.featured-projects {
+    h2 {
+        font-family: $sans-serif;
+        margin-top: .5em !important;
+    }
+
+    .fl-post-grid-content p {
+        margin-bottom: 3px !important;
+    }
+
+    a {
+        color: color(primary);
+
+        &.fl-post-grid-more {
+            border: 2px solid color(primary);
+            font-size: 16px;
+            line-height: 18px;
+            padding: 8px 16px;
+        }
+    }
+}

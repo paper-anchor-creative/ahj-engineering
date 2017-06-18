@@ -28,7 +28,7 @@ gulp.task( 'server', function() {
     // change 'playground' to whatever your local Nginx/Apache vhost is set
     // most commonly 'http://localhost/' or 'http://127.0.0.1/'
     // See http://www.browsersync.io/docs/options/ for more information
-    proxy: 'http://localhost/crane/'
+    proxy: 'http://localhost/ahj/'
   });
 
   // Reload the browser if any .php file changes within this directory
@@ -50,13 +50,13 @@ gulp.task( 'server', function() {
 // Processes SASS and reloads browser.
 gulp.task( 'scss', function() {
   return gulp.src( './build/scss/style.scss' )
-    .pipe(sourcemaps.init())
+    // .pipe(sourcemaps.init())
     .pipe( plumber( { errorHandler: onError } ) )
     .pipe( sass({
       outputStyle: 'compressed',
     }))
     .pipe(autoprefixer())
-    .pipe(sourcemaps.write('./'))
+    // .pipe(sourcemaps.write('./'))
     .pipe( gulp.dest( 'dist' ) )
     .pipe( reload( { stream: true } ) );
 } );

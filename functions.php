@@ -193,6 +193,7 @@ function add_role_to_body($classes) {
 /**
  * Customize TinyMCE
  * More at https://codex.wordpress.org/TinyMCE
+ * @todo Currently applies to all roles. Should update to only affect editors.
  */
 function TinyMCE_settings( $in ) {
   $in['remove_linebreaks'] = false;
@@ -218,7 +219,7 @@ function TinyMCE_settings( $in ) {
 
   return $in;
 }
-add_filter( 'tiny_mce_before_init', 'TinyMCE_settings' );
+// add_filter( 'tiny_mce_before_init', 'TinyMCE_settings' );
 
 function tab_settings($settings) {
   $settings['media_buttons'] = false;
