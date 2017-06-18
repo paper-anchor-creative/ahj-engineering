@@ -50,13 +50,13 @@ gulp.task( 'server', function() {
 // Processes SASS and reloads browser.
 gulp.task( 'scss', function() {
   return gulp.src( './build/scss/style.scss' )
-    .pipe(sourcemaps.init())
+    // .pipe(sourcemaps.init())
     .pipe( plumber( { errorHandler: onError } ) )
     .pipe( sass({
       outputStyle: 'compressed',
     }))
     .pipe(autoprefixer())
-    .pipe(sourcemaps.write('./'))
+    // .pipe(sourcemaps.write('./'))
     .pipe( gulp.dest( 'dist' ) )
     .pipe( reload( { stream: true } ) );
 } );
