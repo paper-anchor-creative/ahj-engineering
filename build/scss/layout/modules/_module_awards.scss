@@ -1,0 +1,8 @@
+//TODO create awards module for beaver builder - include color select option
+
+.awards {
+  padding-left: 1em;
+ @include media($xl) {
+   padding-left: 0;
+ }
+}
