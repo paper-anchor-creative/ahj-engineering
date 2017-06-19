@@ -4,6 +4,7 @@
     margin: 0;
     z-index: 999
     @extend %header_color;
+    min-width: 320px;
 }
 
 .masthead {
