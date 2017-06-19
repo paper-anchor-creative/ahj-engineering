@@ -19,17 +19,46 @@
 @import "layout/global_content";
 
 /* Shame */
+.site-description {
+    display: none;
+}
 
 .hero-script {
-    color: color(white);
     position: relative;
-    font-size: 150%;
-    text-shadow: 0 0 10px black;
+    color: color(white);
+
+    // @include media($small) {
+    //     font-size: 3.1vw;
+    // }
+    //
+    // @include media($medium) {
+    //     font-size: 2vw;
+    // }
 
     h2, .hero-script-content {
-        width: 594px;
-        margin: 0 auto;
-        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: inline-block;
+        font-size: 1.4em;
+        text-shadow: 0 0 10px black;
+        white-space: nowrap;
+
+        @include media($small) {
+            width: inherit;
+            margin: inherit;
+            font-size: 5vw;
+        }
+
+        @include media($small) {
+            font-size: 4vw;
+        }
+
+        @include media($large) {
+            font-size: 3vw;
+        }
+
     }
 
     .indent {
@@ -51,13 +80,13 @@
         display: inline-block;
         font-family: $cursive;
         font-weight: 400;
-        transform: rotate(-3deg) translate(-3.4em, 55px);
+        transform: rotate(-3deg) translate(-64%, 95%);
 
-        &::before {
+        &:before {
             content: "^";
             position: absolute;
-            top: -7px;
-            left: 50px;
+            top: -0.5vw;
+            left: 23%;
             font-size: 140%;
         }
     }
