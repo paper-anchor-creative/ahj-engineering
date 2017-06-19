@@ -114,3 +114,29 @@
         }
     }
 }
+
+
+.fl-module-callout {
+    margin-bottom: 1em;
+
+    .fl-callout-title {
+        line-height: 1;
+    }
+
+    .fl-callout-title-link {
+        padding-bottom: 0;
+    }
+
+    .fl-callout-cta-link {
+        @include button-styles();
+        margin-bottom: 1em;
+    }
+
+    .fl-callout-text {
+
+        h2, h3, h4, h5, h6 {
+            margin: -.5em 0 1em 0;
+        }
+
+    }
+}
