@@ -2,8 +2,10 @@
     width: 100%;
     padding: 0;
     margin: 0;
-    @extend %header_color;
+    position: relative;
+    z-index: 999;
     min-width: 320px;
+    @extend %header_color;
 }
 
 .masthead {
@@ -220,11 +222,14 @@
                 .sub-menu {
                     display: none;
                     position: absolute;
-                    right: 0;
+                    left: -.5em;
                     padding: 0 0 0.5em;
                     background-color: color(white);
-                    width: 300px;
+                    width: 240px;
                     border-bottom: 10px solid color(secondary);
+                    @include media($xl) {
+                      width: 280px;
+                    }
 
                     .menu-item {
                         width: 100%;
