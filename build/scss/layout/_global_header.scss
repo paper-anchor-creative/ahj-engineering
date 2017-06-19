@@ -218,7 +218,7 @@
                         display: block;
                     }
                 }
-
+                //TODO detect if drop-down menus are positioned off screen and adjust dynamically instead of with media queries and width delcarations
                 .sub-menu {
                     display: none;
                     position: absolute;
