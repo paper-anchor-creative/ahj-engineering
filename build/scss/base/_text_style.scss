@@ -3,7 +3,11 @@
 ==================================*/
 
 /*----------  Content  ----------*/
-
+a {
+    &:active {
+        color: color(tertiary);
+    }
+}
 p {
     margin: 0 0 1.5em;
     font-family: $sans-serif;
@@ -17,7 +21,7 @@ p {
         padding-bottom: 2px;
         border-bottom: 1px solid color(link);
 
-        &:hover {
+        &:hover, &:active {
             color: color(linkhover);
             border-bottom: 1px solid color(linkhover);
         }

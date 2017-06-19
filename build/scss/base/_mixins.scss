@@ -6,3 +6,18 @@
         @content;
     }
 }
+
+@mixin button-styles() {
+    border: 2px solid color(primary);
+    font-size: 16px;
+    line-height: 18px;
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 8px 0;
+    text-decoration: none;
+
+    &:hover {
+        color: color(primary-dark);
+        border-color: color(primary-dark);
+    }
+}
