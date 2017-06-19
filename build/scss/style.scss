@@ -140,3 +140,8 @@
 
     }
 }
+
+//TODO find a way to get control over Beaver Builder default margins and padding (hopefully without building our own page builder tool...)
+.fl-module-content {
+  margin: 0;
+}
