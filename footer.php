@@ -19,9 +19,10 @@
 		</nav>
 		<div class="site-info">
 			<div class="copyright">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'ahj-engineering' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'ahj-engineering' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'ahj-engineering' ), 'ahj-engineering', '<a href="https://automattic.com/" rel="designer">Underscores.me</a>' ); ?>
+				<div class="footer-item">&copy; AHJ Engineers, PC</div>
+				<div class="footer-item">5418 N. Eagle Road #140 Boise, ID 83713</div>
+				<div class="footer-item"><a href="tel:208.323.0199">208.323.0199</a></div>
+				<div class="footer-item"><a href="mailto:ahj@ahjengineers.com">ahj@ahjengineers.com</a></div>
 		</div>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
