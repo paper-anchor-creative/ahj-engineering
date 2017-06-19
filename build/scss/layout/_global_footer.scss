@@ -98,7 +98,6 @@
         @include media($medium) {
             width: auto;
             margin: 0;
-
             &:after {
                 content: '|';
                 display: inline-block;
