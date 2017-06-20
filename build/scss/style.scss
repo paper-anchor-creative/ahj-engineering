@@ -20,6 +20,7 @@
 @import "layout/modules/module_references";
 @import "layout/modules/module_awards";
 @import "layout/modules/module_landing_category";
+@import "layout/modules/module_principal_staff";
 
 /* Shame */
 .hero-script {
@@ -113,31 +114,6 @@
     }
 }
 
-
-.fl-module-callout {
-    margin-bottom: 1em;
-
-    .fl-callout-title {
-        line-height: 1;
-    }
-
-    .fl-callout-title-link {
-        padding-bottom: 0;
-    }
-
-    .fl-callout-cta-link {
-        @include button-styles();
-        margin-bottom: 1em;
-    }
-
-    .fl-callout-text {
-
-        h2, h3, h4, h5, h6 {
-            margin: -.5em 0 1em 0;
-        }
-
-    }
-}
 
 //TODO find a way to get control over Beaver Builder default margins and padding (hopefully without building our own page builder tool...)
 .fl-module-content {
