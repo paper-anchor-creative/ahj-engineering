@@ -84,6 +84,13 @@ p {
   }
 }
 
+.content-left {
+  padding-right: 2em;
+}
+.content-right {
+  padding-left: 2em;
+}
+
 //Fix for Beaver Builder menu
 .fl-block-overlay-actions li {
   &:before {
