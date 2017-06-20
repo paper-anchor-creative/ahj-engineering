@@ -1,5 +1,13 @@
 //TODO create landing category module for beaver builder - include color select option
 
 .landing-category {
-
+  padding: 0 .5em;
+  .fl-callout-cta-link {
+    color: color($primary);
+    transition: all .2s;
+    &:hover {
+      background-color: color($primary);
+      color: color(white);
+    }
+  }
 }
