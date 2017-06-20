@@ -2,10 +2,13 @@
 =            Typography            =
 ==================================*/
 
+//TODO Not sure where to add this, but we need a way to set a row color and cascade to child elements (EG links) based on row color
+
 /*----------  Content  ----------*/
 a {
+  color: color(primary);
     &:active {
-        color: color(tertiary);
+        color: color(primary-dark);
     }
 }
 p {
