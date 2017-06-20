@@ -6,3 +6,15 @@
 .fl-row-fixed-width {
   max-width: $xl; //BB - Overrides row width
 }
+
+
+.content-left {
+	@include media($large) {
+  	padding-right: 2em;
+	}
+}
+.content-right {
+	@include media($large) {
+  	padding-left: 2em;
+	}
+}

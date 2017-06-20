@@ -2,8 +2,16 @@
 
 .principals {
   margin-right: 2em;
+  .fl-callout-photo {
+    width: 100%;
+    @include media($large) {
+      width: 50%;
+    }
+  }
 }
 
 .staff {
+  @include media($medium) {
   margin-right: 2em;
+}
 }
