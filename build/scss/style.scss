@@ -23,6 +23,11 @@
 @import "layout/modules/module_principals_staff";
 
 /* Shame */
+
+.widget-area {
+  display: none;
+}
+
 .hero-script {
     position: relative;
     color: color(white);
