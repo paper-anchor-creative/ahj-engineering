@@ -84,6 +84,13 @@ p {
   }
 }
 
+//Fix for Beaver Builder menu
+.fl-block-overlay-actions li {
+  &:before {
+    display: none;
+  }
+}
+
 figcaption {
     font-style: italic;
     font-size: 0.8125em;
