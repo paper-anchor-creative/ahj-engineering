@@ -11,5 +11,7 @@
 }
 
 .staff {
+  @include media($medium) {
   margin-right: 2em;
+}
 }
