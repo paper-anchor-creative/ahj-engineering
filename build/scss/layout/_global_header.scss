@@ -3,7 +3,7 @@
     padding: 0;
     margin: 0;
     position: relative;
-    z-index: 999;
+    z-index: 999; //Fixes conflict with Beaver Builder row z-indexing
     min-width: 320px;
     @extend %header_color;
 }
