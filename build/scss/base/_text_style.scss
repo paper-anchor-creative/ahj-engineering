@@ -52,6 +52,9 @@ p {
           }
       }
   }
+  .fl-module-pp-content-grid li:before {
+    content: '';
+  }
 
   ol {
       padding-left: 1em;

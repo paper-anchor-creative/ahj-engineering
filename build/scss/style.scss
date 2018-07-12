@@ -8,6 +8,8 @@
 @import "base/extends";
 @import "base/form_fields";
 @import "base/text_style";
+@import "base/buttons";
+
 @import "libs/slideout";
 
 @import "config";
@@ -90,8 +92,8 @@
         &:before {
             content: "^";
             position: absolute;
-            top: -0.5vw;
-            left: 23%;
+            top: -2.5vw;
+            left: 18%;
             font-size: 140%;
         }
     }
