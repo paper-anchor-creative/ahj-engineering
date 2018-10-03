@@ -87,14 +87,14 @@
         display: inline-block;
         font-family: $cursive;
         font-weight: 400;
-        transform: rotate(-3deg) translate(-64%, 95%);
+        transform: rotate(-8deg) translate(-64%, 54%);
 
         &:before {
             content: "^";
             position: absolute;
-            top: -2.5vw;
+            top: -1.5vw;
             left: 18%;
-            font-size: 140%;
+            font-size: 110%;
         }
     }
 }
