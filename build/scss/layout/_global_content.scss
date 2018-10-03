@@ -10,11 +10,15 @@
 
 .content-left {
 	@include media($large) {
+		float: left;
+		padding-bottom: 2em;
   	padding-right: 2em;
 	}
 }
 .content-right {
 	@include media($large) {
+		float: right;
+		padding-bottom: 2em;
   	padding-left: 2em;
 	}
 }
